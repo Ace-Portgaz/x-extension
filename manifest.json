@@ -1,0 +1,22 @@
+{
+  "manifest_version": 3,
+  "name": "Web Resource Sniffer",
+  "version": "1.0.0",
+  "description": "Capture public media resources loaded by the current page.",
+  "permissions": ["webRequest", "downloads", "storage", "tabs"],
+  "host_permissions": ["<all_urls>"],
+  "background": {
+    "service_worker": "background.js"
+  },
+  "content_scripts": [
+    {
+      "matches": ["<all_urls>"],
+      "js": ["content.js"],
+      "run_at": "document_idle"
+    }
+  ],
+  "action": {
+    "default_title": "Resource Sniffer",
+    "default_popup": "popup.html"
+  }
+}

@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <title>资源嗅探</title>
+  <link rel="stylesheet" href="popup.css">
+</head>
+<body>
+  <header>
+    <div>
+      <h1>资源嗅探</h1>
+      <p id="summary">正在读取…</p>
+    </div>
+    <button id="refresh" title="刷新">↻</button>
+  </header>
+
+  <nav id="filters" aria-label="资源类型">
+    <button class="active" data-kind="all">全部</button>
+    <button data-kind="image">图片</button>
+    <button data-kind="video">视频</button>
+    <button data-kind="stream">流媒体</button>
+  </nav>
+
+  <main id="list"></main>
+
+  <footer>
+    <button id="copy-all">复制可见链接</button>
+    <button id="clear" class="danger">清空</button>
+  </footer>
+  <script src="popup.js"></script>
+</body>
+</html>
