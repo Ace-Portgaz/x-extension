@@ -1,9 +1,9 @@
 {
   "manifest_version": 3,
-  "name": "Web Resource Sniffer",
-  "version": "1.0.0",
-  "description": "Capture public media resources loaded by the current page.",
-  "permissions": ["webRequest", "downloads", "storage", "tabs"],
+  "name": "Stream Sniffer",
+  "version": "2.0.0",
+  "description": "Capture HLS and DASH manifests loaded by the current page.",
+  "permissions": ["webRequest", "downloads", "storage", "tabs", "offscreen"],
   "host_permissions": ["<all_urls>"],
   "background": {
     "service_worker": "background.js"
